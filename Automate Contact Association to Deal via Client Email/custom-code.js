@@ -60,9 +60,30 @@ exports.main = async (event) => {
 
             console.log('Association with existing contacts successful');
         } else {
+
+            // Extract firstname, lastname, and company from email
+            const emailPattern = /([a-zA-Z]+)(?:[._]([a-zA-Z]+))?@([a-zA-Z0-9.-]+)\./;
+            const match = clientEmail.match(emailPattern);
+
+            let firstName = null;
+            let lastName = null;
+            let company = null;
+
+            if (match) {
+                const toProperCase = (str) => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+                firstName = toProperCase(match[1]);
+                lastName = match[2] ? toProperCase(match[2]) : null;
+                company = toProperCase(match[3]);
+            }
+
+            console.log('Extracted details:', { firstName, lastName, company });
             // Step 3: Create the contact and associate it with the deal
             const createContactPayload = {
                 properties: {
+                    firstname: firstName,
+                    lastname: lastName,
+                    company: company,
                     email: clientEmail,
                 },
             };

@@ -1,5 +1,7 @@
 # HubSpot Contact and Deal Association Script
 
+[![Watch the overview video](https://img.youtube.com/vi/QMg25p-23ww/0.jpg)](https://www.youtube.com/watch?v=QMg25p-23ww)
+
 ## Overview
 This script is designed to work with the HubSpot API to search for, create, and associate contacts with deals in HubSpot CRM. It uses a Node.js environment and leverages the `axios` library to make HTTP requests.
 
