@@ -34,11 +34,8 @@ This repository demonstrates how to enrich company data in HubSpot for free, usi
 2. Verify that the enriched data is correctly populated in HubSpot.
 3. Publish the workflow to automate the process.
 
-## Custom Code
-The custom code used in this demo is available [here](#).
-
 ## Video Demo
-Watch the full tutorial on YouTube: [Insert Link Here](#).
+Watch the full tutorial on YouTube: [Link](https://www.youtube.com/watch?v=GQ3p1GXivoM).
 
 ## Tags
 HubSpot, Apollo.io, company enrichment, free API, custom code, CRM automation, data enrichment
